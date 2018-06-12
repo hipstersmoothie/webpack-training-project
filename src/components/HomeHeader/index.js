@@ -11,7 +11,7 @@
  * limitations under the License.
  */
 
-import moment from 'moment/moment';
+import dayjs from 'dayjs';
 import createPlainComponent from '../../utils/createPlainComponent';
 
 const render = target => {
@@ -19,14 +19,14 @@ const render = target => {
   const renderHeader = createPlainComponent(
     `<p>
       LitHub is opening in <span class="home-header__time">∞</span> seconds!
-    </p>`,
+    </p>`
   );
   const element = renderHeader(target);
 
   // Init interactivity
-  const release = moment([2018, 3, 1]);
+  const release = dayjs([2018, 3, 1]);
   const updateDate = () => {
-    const time = release.diff(moment(), 'seconds', true);
+    const time = release.diff(dayjs(), 'seconds', true);
     element.querySelector('.home-header__time').textContent = time.toFixed(3);
 
     // requestAnimationFrame would call updateDate() as soon as the frame changes
