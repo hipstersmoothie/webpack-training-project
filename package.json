@@ -10,7 +10,6 @@
     "token": "node ./helpers/save-github-token.js"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0",
     "dayjs": "^1.6.7",
     "hash-router": "^0.4.0",
     "mini-css-extract-plugin": "^0.4.0",
